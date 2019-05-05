@@ -1,0 +1,239 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans|Titillium+Web');
+
+body {
+    background-color: #dddddd; /* cor do fundo do site  */ 
+    color: rgba(0,0,0,1);
+    font-family: Arial, sans-serif;
+}
+div#interface{
+    width: 900px;
+    background-color: #ffffff; /* cor do fundo da interface */
+    margin: -20px auto 0px auto; /* configura a margem da interface */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* muda a sombra da interface */
+    padding: 10px;/* Dá um espaçamento das palavras da interface */
+}
+
+p{
+			text-align: justify;
+			text-indent: 50px;
+		}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 780px;
+    top: 70px; /* isso serve para dizer onde se coloca a imagem do óculos e no texto html é adicionado o id="icone"  */
+}
+header#cabecalho{
+    border-bottom: 1px #606060 solid;/* Coloca uma linha abaixo do cabeçalho */
+    height: 150px; /* Desce um pouco a linha abaixo do cabeçalho */
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;/* Coloca a imagem google glass de fundo do cabeçalho */
+    /* o no-repeat impede que a imagem se repita */
+    
+     
+}
+header#cabecalho h1 {
+        font-family: 'Bubblegum Sans', cursive, sans-serif;/* Define a fonte do cabeçalho */
+        font-size: 30pt;/* Define o tamanho da letra */
+        color: #606060; /* Define a cor do cabeçalho */
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.6);/* Define a sombra do texto */
+        padding: 10px;
+        margin-bottom: 0px;
+    }   
+header#cabecalho h2{
+        font-family: 'Titillium Web', sans-serif;
+        color: #888888;
+        font-size: 15pt;
+        padding: 0px;  
+        margin-top: 0px;
+}
+/* Formatação de imagens com legendas */
+figure.foto-legenda{
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+}
+figure.foto-legenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+/* Formatação do Menu */
+nav#menu ul{
+    list-style: none; /* tira a bolinha de lista do lado de cada palavra */
+    text-transform: uppercase; /*deixa as palavras em letra maiuscula */
+    position: absolute; /*para que ele fique na parte mais alta do site web
+    mas você precisa explicar para o html a posição relativa
+*/
+    top: -20px;
+    left: 300px;
+    /* o top e o left servem para se posicionar o menu flutuante no ponto desejado */
+}
+nav#menu {
+    display: block; /* Isso serve para que o menu possa flutuar pelo site */
+}
+nav#menu li{
+    display: inline-block; /* deixa as palavras do menu lado a lado */
+    background-color: #dddddd; /* muda a cor de fundo das palavras*/
+    padding: 10px;/* dá espaçamento entre as palavras do menu (configura o tamanho do botão)*/
+    margin: 2px; /* dá o espaçamento fora do botão */
+    transition: background-color 1s; /* Faz com que demore 1 segundo para ficar sombreado quando se passa o mouse por cima do botão. */
+}
+nav#menu li:hover{
+    background-color: #606060; /* muda a cor do botão quando você passa a seta do mouse sobre o botão */
+}
+nav#menu h1{
+    display: none; /* tira o escrito menu principal do texto pois é necessário esconde-lo por questões de estética */
+}
+nav#menu a {
+    color: #000000; /* muda a cor do hyperlink */
+    text-decoration: none;/* tira o sublinhado do hyperlink */
+} 
+nav#menu a:hover {
+    color: #ffffff; /* quando se passa o mouse sobre o texto do menu as palavras mudam para a cor branca */
+    text-decoration: underline; /* Quando você passa o mouse por cima o link fica sublinhado  */
+}    
+section#corpo { /*Configura a seção do site */
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo',sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
+}
+.direita{
+    text-align: right;
+}
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+table#tabelaspec td.ce {
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;   
+}
+aside#lateral {
+    display: block;
+    width: 350px;  
+    float: right;
+    background: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+aside#lateral h1 {
+    font-family: 'FonteLogo',sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+footer#rodape p {
+    text-align: center;
+}
+video#video1 {
+	display: block;
+	position: relative;
+ 	left: 0px; 
+/*	top: 75px;*/
+    width: 350px;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
